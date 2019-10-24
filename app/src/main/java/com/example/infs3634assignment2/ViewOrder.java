@@ -41,12 +41,13 @@ public class ViewOrder extends AppCompatActivity {
         for(int i=0; i<MainActivity.al.size(); i++){
             int[] ai = MainActivity.al.get(i);
             FoodConstructor f = FoodDatabase.getFoodById(ai[0]);
-            int q = ai[0];
+            int q = ai[1];
             String p = f.getFoodPrice();
             int indexSpace = p.indexOf(" ");
             double price = Double.parseDouble(p.substring(indexSpace));
             totalAmount += (price * q);
-            total.setText("Total: $ " + String.valueOf(totalAmount));
+            String s = String.format("%.2f", totalAmount);
+            total.setText("Total: $ " + s);
         }
     }
 }

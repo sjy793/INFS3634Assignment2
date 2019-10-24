@@ -56,7 +56,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.UserViewHold
         String quantity = String.valueOf(quantityValue);
         holder.foodPhoto.setImageResource(food.getImageDrawableId());
         holder.foodName.setText(food.getFoodName() + "    X " + quantity);
-        //holder.quantity.setText(quantity);
+
 
     }
 

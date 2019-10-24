@@ -62,8 +62,8 @@ public class FoodDetail extends AppCompatActivity {
         array[0] = foodID;
         array[1] = Integer.parseInt(quantity.getText().toString());
         MainActivity.al.add(array);
-        //Intent in = new Intent (this, MainActivity.class);
-        //startActivity(in);
+        Intent in = new Intent (this, MainActivity.class);
+        startActivity(in);
     }
 
     public int[] foodDetail() {
